@@ -168,3 +168,57 @@ def b1037():
         print('Intervalo (75,100]')
     if x > 100 or x < 0:
         print('Fora de intervalo')
+def b1038():
+    x,y = input().split()
+    x = int(x)
+    y = int(y)
+    if x == 1:
+        precox = y * 4.00
+    elif x == 2:
+        precox = y * 4.50
+    elif x == 3:
+        precox = y * 5.00
+    elif x == 4:
+        precox = y * 2.00
+    elif x == 5:
+        precox = y * 1.50
+    print("Total: R$ {:.2f}".format(precox))
+def b1040():
+    n1, n2, n3, n4 = input().split()
+    n1= float(n1)
+    n2 = float(n2)
+    n3 = float(n3)
+    n4 = float(n4)
+    media = ((n1 * 2) + (n2 * 3) + (n3 * 4) + (n4 * 1))/10
+    if media >= 7:#aprovado
+        print("Media: {:.1f}".format(media))
+        print("Aluno aprovado.")
+
+    elif media < 7 and media >= 5: #em exame
+        exame = float(input())
+        exame_media = (media + exame)/2
+        if exame_media >= 5:
+            print("Media: {:.1f}".format(media))
+            print("Aluno em exame.")
+            print("Nota do exame: {:.1f}".format(exame))
+            print("Aluno aprovado.")
+            print("Media final: {:.1f}".format(exame_media))
+        else:
+            print("Media: {:.1f}".format(media))
+            print("Aluno em exame.")
+            print("Nota do exame: {:.1f}".format(exame))
+            print("Aluno reprovado.")
+            print("Media final: {:.1f}".format(exame_media))
+
+    elif media < 5:  #reprovado
+        print("Media: {:.1f}".format(media))
+        print("Aluno reprovado.")
+
+
+
+
+
+
+
+
+
