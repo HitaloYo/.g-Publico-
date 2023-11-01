@@ -231,7 +231,24 @@ def b1041():
         print("Q3")
     elif x > 0 and y < 0:
         print("Q4")
-    
+
+def b1042():
+    a,b,c = map(int, input().split())
+    numeros = []
+    ordem = []
+    numeros.append(a)
+    numeros.append(b)
+    numeros.append(c)
+    ordem.append(a)
+    ordem.append(b)
+    ordem.append(c)
+    ordem.sort()
+    for i in range (len(ordem)):
+        print(ordem[i])
+    print("")
+    for i in range (len(numeros)):
+        print(numeros[i])
+
 
 
 
