@@ -231,7 +231,6 @@ def b1041():
         print("Q3")
     elif x > 0 and y < 0:
         print("Q4")
-
 def b1042():
     a,b,c = map(int, input().split())
     numeros = []
@@ -248,7 +247,15 @@ def b1042():
     print("")
     for i in range (len(numeros)):
         print(numeros[i])
-
+def b1043():
+    a, b, c = map(float, input().split()) 
+    if a+b > c and b+c > a and c+a > b: #é triangulo
+        y = a+b+c
+        x = "Perimetro"
+    else:
+        y = ((a+b)*c)/2
+        x = "Area"
+    print("{} = {:.1f}".format(x,y))
 
 
 
