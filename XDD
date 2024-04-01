@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        Conta minhaConta = new Conta();
+        
+        minhaConta.deposita(1000); // Deposita R$ 1000 na conta
+        minhaConta.saca(200); // Sacar R$ 200 da conta
+
+        double rendimento = minhaConta.calculaRendimento(); // Calcula o rendimento da conta
+        System.out.println("Rendimento da conta: R$ " + rendimento);
+
+        String dadosConta = minhaConta.getDadosConta(); // Obtém os dados da conta
+        System.out.println(dadosConta);
+    }
+}
