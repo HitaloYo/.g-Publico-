@@ -1,14 +1,34 @@
-public class Main {
-    public static void main(String[] args) {
-        Conta minhaConta = new Conta();
-        
-        minhaConta.deposita(1000); // Deposita R$ 1000 na conta
-        minhaConta.saca(200); // Sacar R$ 200 da conta
+public class Conta {
+    private String titular;
+    private int numero;
+    private String agencia;
+    private double saldo;
 
-        double rendimento = minhaConta.calculaRendimento(); // Calcula o rendimento da conta
-        System.out.println("Rendimento da conta: R$ " + rendimento);
-
-        String dadosConta = minhaConta.getDadosConta(); // Obtém os dados da conta
-        System.out.println(dadosConta);
+    public void saca(double valor) {
+        if (valor > 0 && valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de R$ " + valor + " realizado com sucesso.");
+        } else {
+            System.out.println("Saldo insuficiente para saque.");
+        }
     }
+
+    public void deposita(double valor) {
+        if (valor > 0) {
+            saldo += valor;
+            System.out.println("Depósito de R$ " + valor + " realizado com sucesso.");
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
+    }
+
+    public double calculaRendimento() {
+        return saldo * 0.1; // Calcula rendimento como 10% do saldo
+    }
+
+    public String getDadosConta() {
+        return "Titular: " + titular + "\nNúmero da conta: " + numero + "\nAgência: " + agencia + "\nSaldo: R$ " + saldo;
+    }
+
+    // Getters e setters omitidos para brevidade
 }
