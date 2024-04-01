@@ -1,0 +1,34 @@
+import java.math.BigDecimal;
+
+public class Conta {
+    private String titular;
+    private int numero;
+    private String agencia;
+    private BigDecimal saldo;
+    
+    public void saca(BigDecimal valor) {
+        if (valor.compareTo(BigDecimal.ZERO) > 0) {
+            saldo = saldo.subtract(valor);
+        }
+    }
+    
+    public void deposita(BigDecimal valor) {
+        if (valor.compareTo(BigDecimal.ZERO) > 0) {
+            saldo = saldo.add(valor);
+        }
+    }
+    
+    public BigDecimal calculaRendimento() {
+        // Implementar lógica para calcular o rendimento com base no saldo atual da conta
+        return BigDecimal.ZERO;
+    }
+    
+    public String getDadosConta() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Titular: ").append(titular);
+        sb.append(", Número: ").append(numero);
+        sb.append(", Agência: ").append(agencia);
+        sb.append(", Saldo: ").append(saldo);
+        return sb.toString();
+    }
+}
