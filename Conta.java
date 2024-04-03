@@ -3,9 +3,10 @@ public class Conta{
     private int numero;
     private String agencia;
     private double saldo;
+    Data dataDeAbertura;
     
 //construtor
-public Conta(String titular, int numero, String agencia, double saldo){
+public Conta(String titular, int numero, String agencia, double saldo, Data dataDeAbertura){
    this.titular = titular;
    this.numero = numero;
    this.agencia = agencia;
